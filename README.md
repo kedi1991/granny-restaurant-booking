@@ -37,3 +37,17 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+
+
+
+Technologies used:
+
+Django
+gunicorn
+Python
+psycopg2 v2.9.6
+dj_database_url v0.5.0
+cloudinary v 1.33.0 
+dj3-cloudinary-storage v0.0.6
+
