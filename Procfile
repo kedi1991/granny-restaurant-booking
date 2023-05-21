@@ -1,0 +1,1 @@
+web: gunicorn grannyrestaurant.wsgi
