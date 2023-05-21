@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-kedi1991-grannyrestaura-q96uxsdiida.ws-eu97.gitpod.io',
-    'granny-restaurant', 'localhost'
+    'granny-restaurant.herokuapp.com', 'localhost'
 ]
 
 
