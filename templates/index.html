@@ -1,0 +1,7 @@
+index
+
+{% for seat in object_list %}
+    {{ seat.seat_id }} <br>
+
+   <img src="{{ seat.seat_image.url }}"></img> 
+{% endfor %}

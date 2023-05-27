@@ -15,4 +15,4 @@ class Seat(models.Model):
         ordering = ['seat_id']
     
     def __str__(self):
-        return self.seat_id
+        return str(self.seat_id)
