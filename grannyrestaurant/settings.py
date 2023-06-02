@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-kedi1991-grannyrestaura-q96uxsdiida.ws-eu97.gitpod.io',
+    '8000-kedi1991-grannyrestaura-q96uxsdiida.ws-eu98.gitpod.io',
     'granny-restaurant.herokuapp.com', 'localhost'
 ]
 
