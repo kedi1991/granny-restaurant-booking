@@ -9,12 +9,11 @@ class Seats(generic.ListView):
     template_name = 'index.html'
     
     
-
 class Bookings(View):
-    def get(self, request, seat_id, *args, **kwargs):
+    def get(self, request, booking_code, *args, **kwargs):
         model = Booking
         queryset = model.objects.all()
-        bookings = get_object_or_404(queryset, id=seat_id)
+        bookings = get_object_or_404(queryset, id=booking_code)
 
         mydata = bookings
 

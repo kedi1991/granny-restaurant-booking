@@ -19,14 +19,13 @@ class Seat(models.Model):
     def __str__(self):
         return str(self.seat_code)
 
-
 class Booking(models.Model):
-    first_name = models.CharField(max_length=25,null=False)
-    last_name = models.CharField(max_length=25,null=False)
-    date_booked = models.DateTimeField(auto_now=True)
-    seat_booked = models.IntegerField(unique=True, null=False)
+    booking_code = models.CharField(max_length=5)
+    booking_client_name = models.CharField(max_length=30)
+    booking_date = models.DateTimeField(auto_now=True)
+
     class Meta:
-        ordering = ['date_booked']
+        ordering = ['booking_code']
     
     def __str__(self):
-        return str(self.first_name)
+        return str(self.booking_code)
