@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-here to book
+<h2>Make reservation</h2>
+<p>Please fill in you information to make a reservation.</p>
     <br>
-    {{date_booked}}<br><br>
-    {{first_name}}<br><br>
-    {{last_name}}<br><br>
-    {{seat_booked}}<br><br>
-    {{id}}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ booking_form }}
+        <button type="submit" class="btn btn-primary">Reserve</button>
+    </form>
 
 {% endblock %}
