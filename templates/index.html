@@ -20,8 +20,13 @@
             <p class="card-text">{{ seat.seat_desc }}</p>
             <p class="card-text">{{ seat.seat_status }}</p>
 
+            {% if user.is_authenticated %}
             <a href="{% url 'bookings' seat.seat_code %}" class="btn btn-primary">Reserve</a>
             <a href="#" class="btn btn-danger">Cancel</a>
+            {% else %}
+            <a href="{% url 'account_login' %}" class="btn btn-primary">Reserve</a>
+            <a href="{% url 'account_login' %}" class="btn btn-danger">Cancel</a>
+            {% endif %}
             </div>
         </div>
     {% endfor %}
