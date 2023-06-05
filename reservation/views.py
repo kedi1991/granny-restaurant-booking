@@ -7,7 +7,7 @@ class Seats(generic.ListView):
     model = Seat
     queryset = model.objects.all()
     template_name = 'index.html'
-    paginate_by = 2
+    
     
 
 class Bookings(View):
@@ -25,5 +25,6 @@ class Bookings(View):
             "last_name": "Okurut",
             "date_booked": "23/1/2009T00:00:00",
             "seat_booked": "True",
+            "id": "is it",
         },
         )
