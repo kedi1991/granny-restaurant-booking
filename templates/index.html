@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
+
 {% block content %}
 <h1>Granny's Restraurant Reservations</h1>
 <p>Please select from the below available seat configurations. Please note that you must be logged in to make a reservation.</p>
+
+<br><br>
+
+<br>
+
     {% for seat in object_list %}
          <br>
 
@@ -14,7 +20,7 @@
             <p class="card-text">{{ seat.seat_desc }}</p>
             <p class="card-text">{{ seat.seat_status }}</p>
 
-            <a href="{% url 'bookings' 1 %}" class="btn btn-primary">Reserve</a>
+            <a href="{% url 'bookings' seat.seat_code %}" class="btn btn-primary">Reserve</a>
             <a href="#" class="btn btn-danger">Cancel</a>
             </div>
         </div>
