@@ -59,4 +59,3 @@ class Bookings(View):
             "booking_form": BookingForm(),
         },
         )
-

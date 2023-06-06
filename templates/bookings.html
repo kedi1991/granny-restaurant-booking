@@ -4,10 +4,10 @@
 <h2>Make reservation</h2>
 <p>Please fill in you information to make a reservation.</p>
     <br>
-
     <form method="post">
         {% csrf_token %}
         {{ booking_form }}
+         
         <button type="submit" class="btn btn-primary">Reserve</button>
     </form>
 
