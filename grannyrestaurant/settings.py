@@ -32,7 +32,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-kedi1991-grannyrestaura-q96uxsdiida.ws-eu98.gitpod.io',

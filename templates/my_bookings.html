@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h2>History</h2>
+<h2>My reservations</h2>
 <br>
 <h3>Hello {{user.username}}</h3>
 <br>
@@ -19,9 +19,11 @@
           <tr>
             <td>{{ my_res.booking_code }}</td>
             <td>{{ my_res.booking_date }}</td>
+            <td>        
+              <a href="{% url 'del_bookings' my_res.id %}">Cancel</a>
+            </td>
             <td><a href="#">Reschedule</a></td>
-            <td><a href="#">Cancel</a></td>
-
+          </form>
           </tr>
         {% endfor %}
         </tbody>

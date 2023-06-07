@@ -74,3 +74,15 @@ class ViewMyReservations(View):
             }
             )
 
+    def post(self, request, username, *args, **kwargs):
+        """
+        This will delete an entry from the users's booking table
+        """
+        model = Booking
+        
+        queryset = model.objects.filter(id=entry_id)
+        bookings = get_object_or_404(queryset)
+        bookings.delete()
+       
+        return redirect('my_bookings')
+    
