@@ -8,12 +8,14 @@ class Seats(generic.ListView):
     model = Seat
     queryset = model.objects.all()
     template_name = 'index.html'
+
+    
     
     
 class Bookings(View):
     def get(self, request, seat_code, *args, **kwargs):
         """
-        This will get the details of the booking
+        Opens the form to fill in reservation details
         """
         model = Booking
         booking_code = seat_code
@@ -24,11 +26,6 @@ class Bookings(View):
         return render(request, 
         'bookings.html',
         {
-            "first_name": booking_code,
-            "last_name": "Okurut",
-            "date_booked": "23/1/2009T00:00:00",
-            "seat_booked": "True",
-            "id": "is it",
             "booking_form": BookingForm(),
         },
         )
@@ -59,3 +56,21 @@ class Bookings(View):
             "booking_form": BookingForm(),
         },
         )
+
+
+class ViewMyReservations(View):
+    def get(self, request, username, *args, **kwargs):
+        """
+        Displays a list of all reservations made with the restaurant.
+        """
+        model = Booking
+        queryset = model.objects.filter(booking_client_name=username)
+        template_name = 'my_bookings.html'
+
+        return render(
+            request, 
+            'my_bookings.html', 
+            {'my_reservations': queryset
+            }
+            )
+

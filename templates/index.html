@@ -5,9 +5,6 @@
 <h1>Granny's Restraurant Reservations</h1>
 <p>Please select from the below available seat configurations. Please note that you must be logged in to make a reservation.</p>
 
-<br><br>
-
-<br>
 
     {% for seat in object_list %}
          <br>
@@ -22,10 +19,8 @@
 
             {% if user.is_authenticated %}
             <a href="{% url 'bookings' seat.seat_code %}" class="btn btn-primary">Reserve</a>
-            <a href="#" class="btn btn-danger">Cancel</a>
             {% else %}
             <a href="{% url 'account_login' %}" class="btn btn-primary">Reserve</a>
-            <a href="{% url 'account_login' %}" class="btn btn-danger">Cancel</a>
             {% endif %}
             </div>
         </div>

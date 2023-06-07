@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h2>History</h2>
+<br>
+<h3>Hello {{user.username}}</h3>
+<br>
+<p>Find below your reservations with Granny restaurant</p>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Table</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for my_res in my_reservations %}
+          <tr>
+            <td>{{ my_res.booking_code }}</td>
+            <td>{{ my_res.booking_date }}</td>
+            <td><a href="#">Reschedule</a></td>
+            <td><a href="#">Cancel</a></td>
+
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+{% endblock %}

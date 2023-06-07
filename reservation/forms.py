@@ -10,6 +10,7 @@ class BookingForm(forms.ModelForm):
             'booking_date': forms.DateTimeInput(
                 attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd', 'class': 'form-control'}
             )
+            
         }
        
 
