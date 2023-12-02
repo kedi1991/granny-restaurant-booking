@@ -29,6 +29,10 @@ This projects simulates a booking a procedure at the Reastaurant
 
 ## Deployment images
 
+### Project wireframes
+![restaurant card](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701483661/granny_restaurant/resturant_card_lkkl2m.png)
+![booking page](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701483669/granny_restaurant/booking_form_a0jlyu.png)
+
 ### Start of the project
 
 ![mockup for different screen sizes](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1686133085/state_2_pe8x6c.jpg)
