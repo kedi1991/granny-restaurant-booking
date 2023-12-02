@@ -55,6 +55,12 @@ This projects simulates a booking a procedure at the Reastaurant
 Not implemented 
 
 ## User stories
+1. As a site admin , I want to add table configurations so that a client can make a choice.
+2. As a site admin, I want to delete a table configuration so that a client can choose only available options
+3. As a site user, I want to view all table co figurations so that I can make a choice
+4. As an authenticated user, I want to make a reservation so that I can have a meal
+5. As an authenticated user, I want to delete a reservation so that the restaurant can offer the same slot to another client
+6. As an authenticated user, I want to edit a reservation so that I have a right setup for a group meal
 
 ## Code validation
 No validations run
