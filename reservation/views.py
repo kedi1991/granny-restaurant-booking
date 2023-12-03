@@ -91,6 +91,12 @@ class ViewMyReservations(View):
         Edits the current booking
         """
         booking = get_object_or_404(Booking, id = booking_id)
+        #Update the data incase it is a POST
+        if request.method == 'POST':
+            form = BookingForm(request.POST, instance=Booking)
+            if form.is_valid():
+                form.save()
+                return redirect('my_bookings')
         form = BookingForm(instance = booking)
         context = {
             'form': form
