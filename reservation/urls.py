@@ -7,5 +7,5 @@ urlpatterns = [
     path('<slug:seat_code>/', views.Bookings.as_view(), name='bookings'),
     path('<slug:username>', views.ViewMyReservations.as_view(), name='my_bookings'),    
     path('<slug:id>', views.ViewMyReservations.as_view(), name='del_bookings'),   
-    path('edit/<booking_id>', views.ViewMyReservations.edit_booking , name='edit_booking'),     
+    path('edit/<booking_id>', views.ViewMyReservations.edit_booking.as_view() , name='edit_booking'),     
 ]
