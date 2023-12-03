@@ -104,9 +104,9 @@ class EditMyReservations(View):
         model = Booking
         
         form = BookingForm(request.POST, instance=Booking)
-            if form.is_valid():
-                form.save()
-                return redirect('my_bookings')
+        if form.is_valid():
+            form.save()
+            return redirect('my_bookings')
 
     def edit_booking(self, request, booking_id, *args, **kwargs):
         """
