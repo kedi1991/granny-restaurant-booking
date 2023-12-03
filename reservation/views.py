@@ -95,7 +95,7 @@ class EditMyReservations(View):
         #queryset = model.objects.filter(booking_client_name=username)
         template_name = 'edit_booking.html'
 
-        return render(request, 'edit_booking.html', context)
+        return render(request, 'edit_booking.html')
 
     def post(self, request, booking_id, *args, **kwargs):
         """
@@ -108,21 +108,5 @@ class EditMyReservations(View):
             form.save()
             return redirect('my_bookings')
 
-    def edit_booking(self, request, booking_id, *args, **kwargs):
-        """
-        Edits the current booking
-        """
-        booking = get_object_or_404(Booking, id = booking_id)
-        #Update the data incase it is a POST
-        if request.method == 'POST':
-            form = BookingForm(request.POST, instance=Booking)
-            if form.is_valid():
-                form.save()
-                return redirect('my_bookings')
-        form = BookingForm(instance = booking)
-        context = {
-            'form': form
-        }
-
-        return render(request, 'edit_booking.html', context)
+    
     
