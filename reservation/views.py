@@ -86,11 +86,11 @@ class ViewMyReservations(View):
        
         return redirect('my_bookings')
 
-    def edit_booking(request, booking_id):
+    def edit_booking(request, booking_code):
         """
         Edits the current booking
         """
-        booking = get_object_or_404(Booking, id = booking_id)
+        booking = get_object_or_404(Booking, id = booking_code)
         form = BookingForm(context = booking)
         context = {
             'form': form
