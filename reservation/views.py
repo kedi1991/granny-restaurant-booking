@@ -92,7 +92,7 @@ class EditMyReservations(View):
         Displays the reservation to be edited.
         """
         model = Booking
-        queryset = model.objects.filter(booking_id=id)
+        queryset = model.objects.filter(id=booking_id)
         template_name = 'edit_booking.html'
 
         return render(request, 'edit_booking.html', queryset)
