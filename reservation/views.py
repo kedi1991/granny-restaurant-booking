@@ -91,7 +91,7 @@ class ViewMyReservations(View):
         Edits the current booking
         """
         booking = get_object_or_404(Booking, id = booking_id)
-        form = BookingForm(context = booking)
+        form = BookingForm(instance = booking)
         context = {
             'form': form
         }
