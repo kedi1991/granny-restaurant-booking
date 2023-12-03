@@ -85,4 +85,7 @@ class ViewMyReservations(View):
         bookings.delete()
        
         return redirect('my_bookings')
+
+    def edit_booking(request, booking_id):
+        return render(request, 'reservation/edit_booking.html')
     
