@@ -22,7 +22,7 @@
             <td>        
               <a href="{% url 'del_bookings' my_res.id %}">Cancel</a>
             </td>
-            <td><a href="/edit/{{ my_res }}">Reschedule</a></td>
+            <td><a href="/edit/{{ my_res.booking_code }}">Reschedule</a></td>
           </form>
           </tr>
         {% endfor %}
