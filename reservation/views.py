@@ -86,7 +86,7 @@ class ViewMyReservations(View):
        
         return redirect('my_bookings')
 
-    def edit_booking(self, request, booking_id):
+    def edit_booking(self, request, booking_id, *args, **kwargs):
         """
         Edits the current booking
         """
