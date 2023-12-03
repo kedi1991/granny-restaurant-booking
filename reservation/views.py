@@ -86,6 +86,28 @@ class ViewMyReservations(View):
        
         return redirect('my_bookings')
 
+class EditMyReservations(View):
+    def get(self, request, booking_id, *args, **kwargs):
+        """
+        Displays the reservation to be edited.
+        """
+        model = Booking
+        #queryset = model.objects.filter(booking_client_name=username)
+        template_name = 'edit_booking.html'
+
+        return render(request, 'edit_booking.html', context)
+
+    def post(self, request, booking_id, *args, **kwargs):
+        """
+        This will save an entry after editing
+        """
+        model = Booking
+        
+        form = BookingForm(request.POST, instance=Booking)
+            if form.is_valid():
+                form.save()
+                return redirect('my_bookings')
+
     def edit_booking(self, request, booking_id, *args, **kwargs):
         """
         Edits the current booking
