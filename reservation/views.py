@@ -106,8 +106,9 @@ class EditMyReservations(View):
         This will save an entry after editing
         """
         model = Booking
+        instance = model.objects.get(id=booking_id)
+        form = BookingForm(request.POST, instance=instance)
         
-        form = BookingForm(request.POST, instance=Booking)
         if form.is_valid():
             form.instance.full_clean()
             form.save()
