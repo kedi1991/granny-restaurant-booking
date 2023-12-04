@@ -113,7 +113,7 @@ class EditMyReservations(View):
         if form.is_valid():
             form.instance.full_clean()
             form.save()
-            redirect_url = reverse('my_bookings', kwargs={'username': username})
+            redirect_url = reverse('my_bookings', kwargs={'username': request.user.username})
             return redirect(redirect_url)
 
     
