@@ -24,7 +24,6 @@ class Booking(models.Model):
     booking_client_name = models.CharField(max_length=30, null=False)
     booking_client_phone = models.CharField(max_length=15, null=False)
     booking_client_email = models.EmailField(null=False)
-
     booking_date = models.DateTimeField(auto_now=False)
 
     class Meta:

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from .models import Seat
 
-class TestModels(TestCase):
+class TestSeatModel(TestCase):
 
     def setUp(self):
         """
