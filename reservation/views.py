@@ -116,5 +116,16 @@ class EditMyReservations(View):
             redirect_url = reverse('my_bookings', kwargs={'username': request.user.username})
             return redirect(redirect_url)
 
+class DeleteMyReservations(View):
+    def post(self, request, booking_id, *args, **kwargs):
+        """
+        This will delete an entry
+        """
+        model = Booking
+        instance = model.objects.get(id=booking_id)
+        instance.delete()
+        redirect_url = reverse('my_bookings', kwargs={'username': request.user.username})
+        return redirect(redirect_url)
+
     
     
