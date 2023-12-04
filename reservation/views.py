@@ -121,9 +121,8 @@ class DeleteMyReservations(View):
         """
         This will delete an entry
         """
-        model = Booking
-        instance = model.objects.get(id=booking_id)
-        instance.delete()
+        booking = get_object_or_404(Booking, id=booking_id)
+        booking.delete()
         redirect_url = reverse('my_bookings', kwargs={'username': request.user.username})
         return redirect(redirect_url)
 
