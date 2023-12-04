@@ -15,3 +15,10 @@ class TestBookingModel(TestCase):
     def test_booking_cancel(self):
         self.Booking0.delete()
         self.assertEqual(Booking.objects.count(), 0)
+
+    def test_Booking_edit(self):
+        booking = Booking.objects.get(booking_code='T001')
+        booking.booking_client_phone = '3466110099'
+        booking.save()
+        new_booking = Booking.objects.get(booking_code='T001')
+        self.assertEqual(new_booking.booking_client_phone, '077445555')
