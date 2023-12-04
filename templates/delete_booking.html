@@ -7,8 +7,9 @@
 <br>
 <p>Are you sure you would like to cancel your reservation?</p>
     <br>
-    <form action="{% url 'del_bookings' my_res.id %}" method="post">
+    <form method="post">
         {% csrf_token %}
+        {{ form  }}
         <button type="submit" class="btn btn-primary">Yes</button>
     </form>
 

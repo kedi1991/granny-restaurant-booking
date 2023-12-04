@@ -117,6 +117,21 @@ class EditMyReservations(View):
             return redirect(redirect_url)
 
 class DeleteMyReservations(View):
+
+    def get(self, request, booking_id, *args, **kwargs):
+        """
+        Displays the confirmation for deletion
+        """
+        model = Booking
+
+        instance = Booking.objects.get(id=booking_id)
+        form = BookingForm(instance=instance)
+        context = {'form': form}
+
+        template_name = 'delete_booking.html'
+
+        return render(request, 'delete_booking.html', context)
+
     def post(self, request, booking_id, *args, **kwargs):
         """
         This will delete an entry
