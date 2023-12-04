@@ -109,6 +109,7 @@ class EditMyReservations(View):
         
         form = BookingForm(request.POST, instance=Booking)
         if form.is_valid():
+            form.instance.full_clean()
             form.save()
             return redirect('my_bookings')
 
