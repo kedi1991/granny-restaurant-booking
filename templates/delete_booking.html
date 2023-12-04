@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h2>Delete your booking</h2>
+<br>
+<h3>Hello {{user.username}}</h3>
+<br>
+<p>Are you sure you would like to cancel your reservation?</p>
+    <br>
+    <form action="{% url 'del_bookings' my_res.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Yes</button>
+    </form>
+
+{% endblock %}
