@@ -11,3 +11,7 @@ class TestBookingModel(TestCase):
 
     def test_booking_create(self):
         self.assertEqual(Booking.objects.count(), 1)
+
+    def test_booking_cancel(self):
+        self.Booking0.delete()
+        self.assertEqual(Booking.objects.count(), 1)
