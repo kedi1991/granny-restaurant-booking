@@ -1,6 +1,8 @@
 from django.test import TestCase
 
 class TestGranny(TestCase):
-
+    """
+    Dummy test
+    """
     def test_if_it_works(self):
-        assertEqual(1,0)
+        self.assertEqual(1,1)
