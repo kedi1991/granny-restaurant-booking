@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 from django.views import generic, View
 from .models import Seat, Booking
 from .forms import BookingForm
