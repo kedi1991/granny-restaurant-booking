@@ -21,4 +21,4 @@ class TestBookingModel(TestCase):
         booking.booking_client_phone = '3466110099'
         booking.save()
         new_booking = Booking.objects.get(booking_code='T001')
-        self.assertEqual(new_booking.booking_client_phone, '077445555')
+        self.assertEqual(new_booking.booking_client_phone, '3466110099')
