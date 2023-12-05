@@ -50,9 +50,6 @@ This projects simulates a booking a procedure at the Reastaurant
 2. 4 seater
 3. 8 seater
 4. 16 seater
-## Testing steps
-
-Not implemented 
 
 ## User stories
 1. As a site admin , I want to add table configurations so that a client can make a choice.
@@ -64,23 +61,54 @@ Not implemented
 
 ## Code validation
 No validations run
+
+## Testing steps
+1. Create test classes with naming convention "test_<classname>"
+2. Write a fail test case 
+3. Run the test case using the command ```python3 manage.py test```
+4. Edit the test case until it passes the test.
+5. Generate a coverage report using the command ```coverage run --source=<app_name> manage.py test``` to show the extent of testing for the entire application. A sample test case and coverage report is shown below.
+
+#### Sample testcase
+![Sample test case run](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701736917/test_case_result_uoo2cz.png)
+#### Sample coverage report
+
+![Sample coverage report](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701736917/coverage_report_yl9m6q.png)
+
 ## Models
-1. Booking
-2. Seat
+1. Booking. 
+
+This is the a representation of the reservation made at the restaurant 
+
+| Attribute | Detail |
+|-----------------|-----------------|
+| Seat_code (PK)   | Code of the seat (table). This is created by the site admin only   |
+| Seat_desc | Brief explanation of the seat/ table configuration    |
+| Seat_persons    | Number of occupants for which the table has been reserved  |
+| Seat_max  | Maximum number of occupants for the table  |
+| Seat_image   | Image representation of the table   |
+
+
+
+2. Seat.
+This respresents the actual table with a predefined capacity of occupants.
+
+| Attribute | Detail |
+|-----------------|-----------------|
+| booking_code (PK)   | Code of the seat (table)  |
+| booking_client_name | Name of the online user/ client making the reservation    |
+| booking_client_phone    | Phone contact of the client  |
+| booking_client_email  | Email of the client  |
+| booking_date   | Date on which the client would like to have a meal at the restaurant  |
+
 
 ## Future changes
+1. Add notifications (messaging) to the UI
+2. Block duplicate bookings on the same day
 
-1. Add role based access to resources
-2. Enable rescheduling and cancellation of reservations
-3. Add notifications (messaging) to the UI
-4. Setup automated testing
-5. Allow the admin to add more seats (Tables at the restaurant) without using the admin panel
-6. Block duplicate bookings on the same day
-7. Add more css styling to all pages and improve appearance
-8. Add more user stories to the project to reflect possible interactions
-9. Complete the README!
 
 ##  Credits
-1. CI mentor: Harry Dhillon for the good guidance
+1. CI mentor: Harry Dhillon for the good guidance (Previous Mentor)
+2. Thanks to the strong slack community for the assistance
 
 
