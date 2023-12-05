@@ -8,7 +8,7 @@ This projects simulates a booking a procedure at the Reastaurant
 - HTML
 - CSS
 - JS
-- Python (Djangp framework)
+- Python (Django framework)
 ## Libraries
 - asgiref 3.6.0
 - cloudinary 1.33.0
@@ -28,6 +28,11 @@ This projects simulates a booking a procedure at the Reastaurant
 - sqlparse 0.4.4
 
 ## Deployment images
+Sample images of the different pages on mobile screen (Tested using Samsung S9+)
+![Homepage](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701741695/IMG-20231205-WA0002_cykvbd.jpg)
+![My reservations page](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701741695/IMG-20231205-WA0005_vf85fl.jpg)
+![Edit reservation](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701741695/IMG-20231205-WA0003_jiquur.jpg)
+
 
 ### Project wireframes
 ![restaurant card](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701483661/granny_restaurant/resturant_card_lkkl2m.png)
