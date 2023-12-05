@@ -4,29 +4,6 @@
 This application will help the restaurant owner manage clients efficently and provide adequate space to those who have reserved a table for a meal. With this application, the restaurant owner can allocate resources (Human resource, chairs, and security) based on the bookings that have been made. This will in turn allow for better budgeting and customer care for clients.
 ![Image of the home page](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1686133085/state_1_angjix.jpg)
 
-## Technologies used:
-- HTML
-- CSS
-- JS
-- Python (Django framework)
-## Libraries
-- asgiref 3.6.0
-- cloudinary 1.33.0
-- dj-database-url 0.5.0
-- dj3-cloudinary-storage 0.0.6
-- Django 3.2.19
-- django-allauth 0.54.0
-- django-crispy-forms 1.14.0
-- gunicorn 20.1.0
-- oauthlib 3.2.2
-- psycopg2 2.9.6
-- pydantic 1.10.8
-- PyJWT 2.7.0
-- python3-openid 3.2.0
-- pytz 2023.3
-- requests-oauthlib 1.3.1
-- sqlparse 0.4.4
-
 ## Deployment images
 Sample images of the different pages on mobile screen (Tested using Samsung S9+)
 ![Homepage](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701741695/IMG-20231205-WA0002_cykvbd.jpg)
@@ -121,6 +98,30 @@ This respresents the actual table with a predefined capacity of occupants.
 11. Create a Procfile at the root of the project workspace (outside all folders) and add the command ```web: gunicorn django_todo.wsgi:application``` in the file. This will tell Heroku how to run the app.
 12. Frome Heroku, run the app. This will display an application error caused by disallowed hostname of the heroku app. To correct this, copy the URL and add it as a new variable ```ALLOWED_HOSTS``` in the Heroku app settings.
 13. The application should run without any interruption :)
+
+
+## Technologies used:
+- HTML
+- CSS
+- JS
+- Python (Django framework)
+## Libraries
+- asgiref 3.6.0
+- cloudinary 1.33.0
+- dj-database-url 0.5.0
+- dj3-cloudinary-storage 0.0.6
+- Django 3.2.19
+- django-allauth 0.54.0
+- django-crispy-forms 1.14.0
+- gunicorn 20.1.0
+- oauthlib 3.2.2
+- psycopg2 2.9.6
+- pydantic 1.10.8
+- PyJWT 2.7.0
+- python3-openid 3.2.0
+- pytz 2023.3
+- requests-oauthlib 1.3.1
+- sqlparse 0.4.4
 
 
 ## Future changes
