@@ -124,6 +124,8 @@ This respresents the actual table with a predefined capacity of occupants.
 - requests-oauthlib 1.3.1
 - sqlparse 0.4.4
 
+## Known bugs
+1. Editing a reservation will erase the initial date value
 
 ## Future changes
 1. Add notifications (messaging) to the UI
