@@ -102,6 +102,22 @@ This respresents the actual table with a predefined capacity of occupants.
 | booking_date   | Date on which the client would like to have a meal at the restaurant  |
 
 
+## Project deployment process
+1. Commit all code cnages to github.
+2. Create Heroku account using the link https://heroku.com. Heroku will be used to host the application remotely.
+3. Install postgres using ```pip3 install psycopg2-binary```
+4. Install the webserver - gunicorn using the command ```pip3 install gunicorn```
+5. Create an app in the heroku account above and give it a name.
+6 On https://elephantsql.com, create a free account and a database instance of type 'Tiny turtle'. Remember to copy the database URL.
+7. Head over to the app created in Heroku in step 5, and choose settings, reveal config vars, and add the variable DATABASE_URL. Set it to the database URL in step 6 above.
+8. In the Gitpod termincal, install the databse package using the command ```pip3 install dj-database-url```
+9. Refreeze the requirements file using the command ```pip3 freeze --local > requirements.txt```
+10. In the settings.py file, replace the deafult SQLLite database reference with that of ElephantSQL. this will allow us to persist and retain any data in remote database.
+11. Create a Procfile at the root of the project workspace (outside all folders) and add the command ```web: gunicorn django_todo.wsgi:application``` in the file. This will tell Heroku how to run the app.
+12. Frome Heroku, run the app. This will display an application error caused by disallowed hostname of the heroku app. To correct this, copy the URL and add it as a new variable ```ALLOWED_HOSTS``` in the Heroku app settings.
+13. The application should run without any interruption :)
+
+
 ## Future changes
 1. Add notifications (messaging) to the UI
 2. Block duplicate bookings on the same day
