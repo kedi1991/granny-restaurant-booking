@@ -27,12 +27,6 @@ Sample images of the different pages on mobile screen (Tested using Samsung S9+)
 ![mockup for different screen sizes](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1686133085/state_2_pe8x6c.jpg)
 
 
-## Seat configurations
-1. 2 seater
-2. 4 seater
-3. 8 seater
-4. 16 seater
-
 ## User stories
 1. As a site admin , I want to add table configurations so that a client can make a choice.
 2. As a site admin, I want to delete a table configuration so that a client can choose only available options
@@ -74,6 +68,13 @@ This is the a representation of the reservation made at the restaurant
 
 2. Seat.
 This respresents the actual table with a predefined capacity of occupants.
+
+
+### Seat configurations
+1. 2 seater
+2. 4 seater
+3. 8 seater
+4. 16 seater
 
 | Attribute | Detail |
 |-----------------|-----------------|
