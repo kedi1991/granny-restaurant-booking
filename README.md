@@ -126,6 +126,7 @@ This respresents the actual table with a predefined capacity of occupants.
 
 ## Known bugs
 1. Editing a reservation will erase the initial date value
+2. No CSS styling on the admin panel page
 
 ## Future changes
 1. Add notifications (messaging) to the UI
