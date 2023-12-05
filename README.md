@@ -2,7 +2,7 @@
 # Granny's restaurant booking
 
 This application will help the restaurant owner manage clients efficently and provide adequate space to those who have reserved a table for a meal. With this application, the restaurant owner can allocate resources (Human resource, chairs, and security) based on the bookings that have been made. This will in turn allow for better budgeting and customer care for clients.
-![Image of the home page](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1686133085/state_1_angjix.jpg)
+![Image of the home page](https://res.cloudinary.com/dr7uvhdmd/image/upload/v1701744400/Capture_xuo7tu.png)
 
 ## Deployment images
 Sample images of the different pages on mobile screen (Tested using Samsung S9+)
